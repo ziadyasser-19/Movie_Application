@@ -1,0 +1,87 @@
+### Get All Users
+GET http://localhost:3000/users HTTP/1.1
+Content-Type: application/json
+
+### Get Saved Movies for a User
+GET http://localhost:3000/users/678e23f40f5e1a46eb98b49d/saved-movies HTTP/1.1
+Content-Type: application/json
+
+### Save a Movie for a User
+POST http://localhost:3000/users/678e23f40f5e1a46eb98b49d/save-movie HTTP/1.1
+Content-Type: application/json
+
+{
+  "movieId": "678bea55e887852288319b4b"
+}
+
+### Remove a Movie from a User's Saved List
+DELETE http://localhost:3000/users/678e23f40f5e1a46eb98b49d/remove-movie HTTP/1.1
+Content-Type: application/json
+
+{
+  "movieId": "678bea55e887852288319b4b"
+}
+
+### Get Random Movies for a User
+GET http://localhost:3000/movies/678e23f40f5e1a46eb98b49d HTTP/1.1
+Content-Type: application/json
+
+### Get Action Movies for a User
+GET http://localhost:3000/movies/678e23f40f5e1a46eb98b49d/action HTTP/1.1
+Content-Type: application/json
+
+### Get Romantic Movies for a User
+GET http://localhost:3000/movies/678e23f40f5e1a46eb98b49d/romantic HTTP/1.1
+Content-Type: application/json
+
+### Get Horror Movies for a User
+GET http://localhost:3000/movies/678e23f40f5e1a46eb98b49d/horror HTTP/1.1
+Content-Type: application/json
+
+### Get Comedy Movies for a User
+GET http://localhost:3000/movies/678e23f40f5e1a46eb98b49d/comedy HTTP/1.1
+Content-Type: application/json
+
+
+### Login with Valid Credentials
+POST http://localhost:3000/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "ziad",
+  "password": "ziad2003"
+}
+
+### Login with Invalid Username
+POST http://localhost:3000/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "invalid_user",
+  "password": "password123"
+}
+
+### Login with Invalid Password
+POST http://localhost:3000/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "john_doe",
+  "password": "wrong_password"
+}
+
+### Login with Missing Username
+POST http://localhost:3000/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "password": "password123"
+}
+
+### Login with Missing Password
+POST http://localhost:3000/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "john_doe"
+}
